@@ -1,0 +1,9 @@
+{
+    "name": "artistically",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "start": "node server2/index.js",
+        "heroku-postbuild": "npm install --prefix server2 && npm install --prefix client && npm run build --prefix client"
+    }
+}
