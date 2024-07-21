@@ -8,7 +8,6 @@ const messageRoutes = require('./routes/messageRoutes');
 const pendingRequestsRoutes = require('./routes/pendingRequests');
 const endorsementsRouter = require('./routes/endorsementRoutes');
 const connectionFetchRouter = require('./routes/acceptRoutes');
-const applyRouter = require('./routes/applicationRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -29,7 +28,6 @@ app.use('/connections', connRoutes);
 app.use('/pending', pendingRequestsRoutes);
 app.use('/endorsements', endorsementsRouter);
 app.use('/fetch', connectionFetchRouter);
-app.use('/apply', applyRouter);
 
 
 app.listen(PORT, () => {
