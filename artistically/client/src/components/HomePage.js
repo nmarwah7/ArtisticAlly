@@ -13,7 +13,7 @@ import EventsDiscovery from './EventsDiscovery';
 import JobOpenings from './JobOpenings';
 import PendingRequests from './PendingRequests';
 import Get_Started from './Get_Started';
-import AcceptedConnections from './AcceptedConnections'; 
+import AcceptedConnections from './AcceptedConnections'; // Import the AcceptedConnections component
 import Endorsement from './Endorsement';
 
 
@@ -49,12 +49,12 @@ function HomePage({ user }) {
     };
 
     const handleAcceptedConnectionsClick = () => {
-        setCurrentPage('acceptedConnections'); 
+        setCurrentPage('acceptedConnections'); // Handle clicking on Accepted Connections button
     };
 
     const handleSendMessage = async () => {
         try {
-            const response = await axios.get('http://localhost:3001/messages/${encodeURIComponent(contactEmail)}');
+            const response = await axios.get(`http://localhost:3001/messages/${encodeURIComponent(contactEmail)}`);
             setContactId(response.data.id);
             setCurrentPage('messages');
             handleClose();
@@ -178,7 +178,7 @@ function HomePage({ user }) {
                             <Endorsement senderEmail={user.email} />
                         </>
                     );
-            case 'acceptedConnections': 
+            case 'acceptedConnections': // New case for displaying accepted connections
                 return (
                     <>
                         <Button
@@ -205,7 +205,7 @@ function HomePage({ user }) {
                                     }} />
 
                                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '80px' }}>
-                                    <h1 style={{ fontWeight: 'bold', fontSize: '2.75rem' }}>Welcome back {user ? '${user.firstName} ${user.lastName}' : ''}! </h1>
+                                    <h1 style={{ fontWeight: 'bold', fontSize: '2.75rem' }}>Welcome back {user ? `${user.firstName} ${user.lastName}` : ''}! </h1>
                                     <h2 style={{ fontSize: '1.7rem' }}>You have successfully logged in!</h2>
                                     <p style={{ fontSize: '1.2rem' }}>Feel free to enjoy the following fun features.</p>
                                     <br /> <br /> <br />
@@ -218,7 +218,7 @@ function HomePage({ user }) {
                                 <img src="/messages.png" alt="Messages" style={{ width: '120px', height: '120px' }} />
                                 <img src="/connections.png" alt="Connections" style={{ width: '120px', height: '120px' }} />
                                 <img src="/endorse.png" alt="Endorse Skills" style={{ width: '120px', height: '120px' }} />
-                                <img src="/conn.png" alt="Accepted Connections" style={{ width: '120px', height: '120px' }} /> 
+                                <img src="/conn.png" alt="Accepted Connections" style={{ width: '120px', height: '120px' }} /> {/* New button for Accepted Connections */}
                             </div>
                             
                             <div style={{ display: 'flex', flexDirection: 'row', gap: '20px', justifyContent: 'center' }}>
