@@ -6,7 +6,7 @@ const authRoutes = require('./routes/authroutes');
 const connRoutes = require('./routes/connectionRoutes');
 const messageRoutes = require('./routes/messageRoutes');
 const pendingRequestsRoutes = require('./routes/pendingRequests');
-const endorsementsRouter = require('./routes/endorsements');
+const endorsementsRouter = require('./routes/endorsementRoutes');
 const connectionFetchRouter = require('./routes/acceptRoutes');
 const applyRouter = require('./routes/applicationRoutes');
 
