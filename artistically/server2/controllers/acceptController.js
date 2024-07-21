@@ -10,12 +10,12 @@ const connection = mysql.createConnection({
 
 const getAcceptedConnections = (req, res) => {
     const { email } = req.params;
-    const query = '
+    const query = `
         SELECT u.id, u.firstName, u.lastName, u.email
         FROM connections c
         JOIN users u ON (c.receiver_email = u.email AND c.sender_email = ?) OR (c.sender_email = u.email AND c.receiver_email = ?)
         WHERE c.status = 'accepted'
-    ';
+    `;
     connection.query(query, [email, email], (err, results) => {
         if (err) {
             console.error('Error fetching accepted connections:', err);
@@ -28,12 +28,12 @@ const getAcceptedConnections = (req, res) => {
 const getConnectionDetails = (req, res) => {
     const { email } = req.params;
     const queryUser = 'SELECT * FROM users WHERE email = ?';
-    const queryEndorsements = '
+    const queryEndorsements = `
         SELECT e.skill, u.firstName as endorsedByFirstName, u.lastName as endorsedByLastName
         FROM endorsements e
         JOIN users u ON e.sender_email = u.email
         WHERE e.receiver_email = ?
-    ';
+    `;
 
     connection.query(queryUser, [email], (err, userResults) => {
         if (err) {
