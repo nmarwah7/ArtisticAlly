@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { List, ListItem, ListItemText, Typography, Box, CircularProgress, Divider, TextField } from '@mui/material';
@@ -22,7 +21,7 @@ function AcceptedConnections({ user }) {
     const fetchAcceptedConnections = async () => {
         setLoading(true);
         try {
-            const response = await axios.get('http://localhost:3001/fetch/accepted/${user.email}');
+            const response = await axios.get(`http://localhost:3001/fetch/accepted/${user.email}`);
             setConnections(response.data);
             setFilteredConnections(response.data);
         } catch (error) {
@@ -35,7 +34,7 @@ function AcceptedConnections({ user }) {
     const handleConnectionClick = async (email) => {
         setLoading(true);
         try {
-            const response = await axios.get('http://localhost:3001/fetch/details/${email}');
+            const response = await axios.get(`http://localhost:3001/fetch/details/${email}`);
             setSelectedConnection(response.data);
         } catch (error) {
             console.error('Error fetching connection details:', error);
@@ -76,7 +75,7 @@ function AcceptedConnections({ user }) {
                             onClick={() => handleConnectionClick(connection.email)}
                             className="list-item"
                         >
-                            <ListItemText primary={'${connection.firstName} ${connection.lastName}'} className="list-item-text"/>
+                            <ListItemText primary={`${connection.firstName} ${connection.lastName}`} className="list-item-text"/>
                         </ListItem>
                     ))}
                 </List>
@@ -85,7 +84,7 @@ function AcceptedConnections({ user }) {
                 {selectedConnection ? (
                     <>
                         <Typography variant="h6" component="div" sx={{ fontWeight: "bold" }} className="detail-title">
-                            {'${selectedConnection.firstName} ${selectedConnection.lastName}'}
+                            {`${selectedConnection.firstName} ${selectedConnection.lastName}`}
                         </Typography>
                         <br></br>
                         <Typography variant="body1" className="detail-text">
