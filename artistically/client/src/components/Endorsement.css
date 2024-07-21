@@ -1,0 +1,38 @@
+
+.endorsement-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    height: 100vh;
+    padding: 20px;
+    margin-top: 20px; 
+}
+
+.endorse-button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.MuiOutlinedInput-root {
+    background-color: #c71585;
+    color: white;
+    
+}
+
+.MuiSelect-root {
+    background-color: #c71585;
+    color: white ;
+    
+}
+
+.MuiInputLabel-root {
+    color: white;
+}
+
+.MuiMenuItem-root {
+    background-color: #c71585;
+    color: white;
+}
