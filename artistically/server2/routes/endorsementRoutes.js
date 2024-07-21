@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { endorseSkill } = require('../controllers/endorsements');
+const { endorseSkill } = require('../controllers/endorsementController');
 
 router.post('/endorse', endorseSkill);
 
