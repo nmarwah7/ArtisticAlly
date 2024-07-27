@@ -1,75 +1,127 @@
 .messages-container {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     height: 85vh;
-    padding: 20px;
 }
 
-.messages-list {
-    flex: 1;
-    /* Messages list takes up remaining vertical space */
+.no-results {
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    /* Ensure it's a block-level element */
+    margin-left: auto;
+    /* Center horizontally */
+    margin-right: auto;
+    /* Center horizontally */
+    width: 90%;
+    /* Optional: Adjust width as needed */
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.chat-list {
+    width: 25%;
+    border-right: 1px solid #ccc;
     overflow-y: auto;
-    /* Enable vertical scrolling if messages overflow */
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.search {
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    /* Ensure it's a block-level element */
+    margin-left: auto;
+    /* Center horizontally */
+    margin-right: auto;
+    /* Center horizontally */
+    width: 90%;
+    /* Optional: Adjust width as needed */
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.search::placeholder {
+    font-family: Montserrat, sans-serif;
+    opacity: 0.6;
+}
+
+.chat-item {
+    padding: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+.chat-item.selected {
+    background-color: #e4c5ea;
+    color: black;
+}
+
+.chat-messages {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+.messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
 }
 
 .message {
-    margin-bottom: 10px;
     padding: 10px;
-    border-radius: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+
 }
 
 .message.sent {
-    background-color: #94e3e1;
-    /* Light green for sent messages */
     align-self: flex-end;
-    /* Align sent messages to the right */
+    background-color: #007bff;
+    /* Adjust as needed */
+    color: white;
+    /* Text color for sent messages */
 }
 
 .message.received {
-    background-color: #DCF8C6;
-    /* Light grey for received messages */
     align-self: flex-start;
-    /* Align received messages to the left */
+    background-color: white;
+    /* Adjust as needed */
 }
 
 .message-input {
-    margin-top: 20px;
     display: flex;
-    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ccc;
 
 }
 
 .message-input input {
     flex: 1;
-    /* Input box expands to fill available space */
-    padding: 18px;
-    /* Increase padding to make the input box thicker */
+    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
     margin-right: 10px;
-    height: auto;
-    /* Adjust height automatically based on padding */
-    box-sizing: border-box;
-    /* Ensure padding and border are included in the height */
+    font-size: 18px;
 }
 
 .message-input input::placeholder {
-    font-size: 20px;
-    /* Adjust this value as needed */
+    font-family: Montserrat, sans-serif;
+    opacity: 0.6;
 }
 
 .message-input button {
     padding: 10px 20px;
-    border: none;
-    background-color: #007BFF;
+    background-color: #007bff;
     color: white;
-    border-radius: 10px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 2rem;
-}
-
-.message-input button:hover {
-    background-color: #0056b3;
-    /* Darker blue on hover */
+    font-size: 18px;
 }

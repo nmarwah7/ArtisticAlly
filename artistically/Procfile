@@ -1,2 +1,2 @@
 web: npm start --prefix client
-api: node artistically/server2/server.js
+api: node server2/server.js

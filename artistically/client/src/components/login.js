@@ -28,7 +28,7 @@ export default function Login() {
 
     const handleLogin = async () => {
         try {
-            const response = await axios.post('http://localhost:3001/auth/login', { email: username, password: password });
+            const response = await axios.post('https://artistically2-b1c26d45fe00.herokuapp.com/auth/login', { email: username, password: password });
             console.log(response.data); // Handle successful login response
             setSuccessMessage("Login successful"); // Set success message
             setErrorMessage(""); // Clear error message

@@ -41,7 +41,9 @@ export default function Welcome_Banner(props) {
                         }}>
                             ArtisticAlly
                         </Typography>
-                        <Button color="inherit">Home</Button>
+                        <Typography sx={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500, fontStyle: 'italic' }}>
+                            Connect, Collaborate, Create!
+                        </Typography>
                     </Toolbar>
                 </CustomAppBar>
             </HideOnScroll>

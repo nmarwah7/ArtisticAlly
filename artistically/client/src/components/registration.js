@@ -71,7 +71,7 @@ export default function Registration() {
 
     const handleRegistration = async () => {
         try {
-            const response = await axios.post('http://localhost:3001/auth/register', {
+            const response = await axios.post('https://artistically2-b1c26d45fe00.herokuapp.com/auth/register', {
                 firstName: firstName, // Pass first name value
                 lastName: lastName, // Pass last name value
                 email: inputEmail,
