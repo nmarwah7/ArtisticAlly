@@ -19,9 +19,9 @@ This platform is built to address the challenges creatives face in finding the r
 - **Backend**: MySQL, MS Azure SQL databases for managing user data, connections, and job listings efficiently.
 
 ## Watch the Demo:
-Check out the demo video to see how the platform works in action:  
+Check out the demo video to see how the platform works in action🎨🎤:  
 [ArtisticAlly Demo Video](https://youtu.be/foNw_v3Fx60?si=CrzhveQ-uDxieRcW)
 
 ---
 
-Feel free to stay tuned for updates and explore the full potential of **ArtisticAlly** once the platform is live! 🎨🎤
+Created as part of NUS Orbital Programme 
